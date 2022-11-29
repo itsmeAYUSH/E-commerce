@@ -1,0 +1,7 @@
+.body h1{
+    height: 150px;
+    justify-content: center;
+    background-color: blueviolet;
+    text-align: center;
+    font-size: 100px;
+}
