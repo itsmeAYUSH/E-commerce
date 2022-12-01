@@ -1,54 +1,62 @@
 import React from "react";
 import Modal from "../../components/Modal/Modal";
 import classes from "./Cart.module.css";
+import { useContext } from "react";
+import CartContext from "../../store/cart-context";
+import CartItems from "./CartItems";
 
-const cartElements = [
-  {
-    title: "Colors",
-    price: 100,
-    imageUrl: "https://prasadyash2411.github.io/ecom-website/img/Album%201.png",
-    quantity: 2,
-  },
-  {
-    title: "Black and white Colors",
-    price: 50,
-    imageUrl: "https://prasadyash2411.github.io/ecom-website/img/Album%202.png",
-    quantity: 3,
-  },
-  {
-    title: "Yellow and Black Colors",
-    price: 70,
-    imageUrl: "https://prasadyash2411.github.io/ecom-website/img/Album%203.png",
-    quantity: 1,
-  },
-];
+// const cartElements = [
+//   {
+//     title: "Colors",
+//     price: 100,
+//     imageUrl: "https://prasadyash2411.github.io/ecom-website/img/Album%201.png",
+//     quantity: 2,
+//   },
+//   {
+//     title: "Black and white Colors",
+//     price: 50,
+//     imageUrl: "https://prasadyash2411.github.io/ecom-website/img/Album%202.png",
+//     quantity: 3,
+//   },
+//   {
+//     title: "Yellow and Black Colors",
+//     price: 70,
+//     imageUrl: "https://prasadyash2411.github.io/ecom-website/img/Album%203.png",
+//     quantity: 1,
+//   },
+// ];
 
 const Cart = (props) => {
-  const CartItems = (
+  const cartCtx = useContext(CartContext);
+  let totalAmount = 0;
+  cartCtx?.items?.forEach((item) => {
+    totalAmount = totalAmount + item.price;
+  });
+
+  const cartItems = (
     <ul className={classes["cart-items"]}>
-      {cartElements.map((item) => (
+      {cartCtx.items.map((item) => (
         <li className={classes.coloumn}>
-          {
-            <img
-              className={classes.img}
-              src={item.imageUrl}
-              alt="Some pic"
-            ></img>
-          }{" "}
-          {item.title}
-          {item.price} {item.quantity}
-          <button className={classes.removeButton}> Remove </button>
+          <CartItems
+            key={item.id}
+            id={item.id}
+            img={item.img}
+            title={item.title}
+            quantity={item.quantity}
+            price={item.price}
+          />
         </li>
       ))}
     </ul>
   );
-  let total = 0;
-  total = total + cartElements[0].price;
+
   return (
-    <Modal>
+    <Modal onClose={props.onClose}>
       <section className={classes.section}>
         <span> CART </span>
-        <button onClick={props.onClose} className={classes.cancel}> x </button>
+        <button onClick={props.onClose} className={classes.cancel}>
+          x
+        </button>
       </section>
       <div className={classes.div}>
         <span className={classes.item}> ITEM </span>
@@ -56,7 +64,7 @@ const Cart = (props) => {
         <span className={classes.item}> QUANTITY </span>
       </div>
       {CartItems}
-      <h2 className={classes.h2}> Total ${total} </h2>
+      <h2 className={classes.h2}> Total ${totalAmount} </h2>
 
       <button className={classes.button}>PURCHASE </button>
     </Modal>

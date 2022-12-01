@@ -26,18 +26,6 @@ const productsArr = [
 
 const AvailableProducts = (props) => {
   return (
-    // <div>
-    //   {productsArr.map((item) => {
-    //     return (
-    //       <div>
-    //         <div className={classes.imageContainer}>
-    //           <img src={item.imageUrl} alt={item.title}></img>
-    //         </div>
-    //         <div className={classes.prodDetails}></div>
-    //       </div>
-    //     );
-    //   })}
-    // </div>
     <div>
       <ul>
         {productsArr.map((item)=>{
