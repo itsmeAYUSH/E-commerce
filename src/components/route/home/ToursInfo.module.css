@@ -1,0 +1,26 @@
+.tourItem{
+    display: flex;
+    border-bottom: 1px solid black;
+    padding: 10px;
+}
+.tourDate{
+    width: 12%;
+}
+.tourPlace{
+    width: 25%;
+    color: #777;
+}
+.tourDes{
+    width: 53%;
+    color: #777;
+}
+.buyBtn{
+    width: 20%;
+    background: #56CCF2;
+    color: white;
+    border: none;
+    padding: 7px;
+    border-radius: 5px;
+    font-weight: 700;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
