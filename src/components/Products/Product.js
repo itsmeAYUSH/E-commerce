@@ -14,7 +14,7 @@ const Product = (props) => {
     <li className={classes.list}>
       <div className={classes.div}>
         <h3>{props.title}</h3>
-        <img src={props.image} alt="image"></img>
+        <img src={props.image} alt="products"></img>
         <span>
           <h1>${props.price}</h1>
           <button onClick={addItemToCart}>Add To Cart</button>
