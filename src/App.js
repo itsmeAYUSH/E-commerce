@@ -7,6 +7,7 @@ import Products from "./components/Products/Products";
 import CartProvider from "./store/CartProvider";
 import Home from '../src/components/route/home/Home'
 import About from '../src/components/route/about/About'
+import Contact from "./components/Layout/contact/Contact";
 // import Footer from "./components/Layout/footer/Footer";
 
 const App = () => {
@@ -40,6 +41,9 @@ const App = () => {
 
         <Route path="/home">
           <Home />
+        </Route>
+        <Route path="/contact">
+          <Contact />
         </Route>
     </CartProvider>
   );

@@ -6,16 +6,24 @@ const Header = (props) => {
   return (
     <Fragment>
       <header className={classes.header}>
-      <NavLink to ="/home"><span>HOME</span></NavLink>
-        <NavLink to ="/store"><span>STORE</span></NavLink>
-        <NavLink to ="/about"><span>ABOUT</span></NavLink>
+        <NavLink to="/home">
+          <span>HOME</span>
+        </NavLink>
+        <NavLink to="/store">
+          <span>STORE</span>
+        </NavLink>
+        <NavLink to="/about">
+          <span>ABOUT</span>
+        </NavLink>
+        <NavLink to="/contact">
+          <span>CONTACT US</span>
+        </NavLink>
 
         <button className={classes.button} onClick={props.onShowCart}>
           Cart <span className={classes.cartNumber}> 0 </span>
         </button>
       </header>
       <h1 className={classes.h1}> The Generics </h1>
-
     </Fragment>
   );
 };
