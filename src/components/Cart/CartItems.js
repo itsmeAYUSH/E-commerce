@@ -1,13 +1,19 @@
+import CartContext from "../../store/cart-context";
+import { useContext } from "react";
+
 const CartItems = (props) => {
-    const onAddHandler = (props) =>{
-    }
+  const cartCntx = useContext(CartContext);
+  const onAddHandler = () => {
+    console.log(props)
+    cartCntx.addItem(props)
+  };
 
   return (
     <li id={`cart-item-${props.id}`}>
       <div>
         <h2>{props.title}</h2>
-        <span>{props.img}</span>
-        <span>{props.price}</span>
+        <img src={props.img} alt='icon'></img>
+        <span>$ {props.price}</span>
         <span> x {props.quantity}</span>
       </div>
       <div>

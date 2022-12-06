@@ -5,22 +5,22 @@ const productsArr = [
   {
     title: "Colors",
     price: 100,
-    imageUrl: "https://prasadyash2411.github.io/ecom-website/img/Album%201.png",
+    imageUrl: "/images/ProductImage/Album-1.png",
   },
   {
     title: "Black and white Colors",
     price: 50,
-    imageUrl: "https://prasadyash2411.github.io/ecom-website/img/Album%202.png",
+    imageUrl: "/images/ProductImage/Album-2.png",
   },
   {
     title: "Yellow and Black Colors",
     price: 70,
-    imageUrl: "https://prasadyash2411.github.io/ecom-website/img/Album%203.png",
+    imageUrl: "/images/ProductImage/Album-3.png",
   },
   {
     title: "Blue Color",
     price: 100,
-    imageUrl: "https://prasadyash2411.github.io/ecom-website/img/Album%204.png",
+    imageUrl: "/images/ProductImage/Album-4.png",
   },
 ];
 
@@ -28,10 +28,14 @@ const AvailableProducts = (props) => {
   return (
     <div>
       <ul>
-        {productsArr.map((item)=>{
+        {productsArr.map((item) => {
           return (
-            <Product title={item.title} price={item.price} image={item.imageUrl}/>
-          )
+            <Product
+              title={item.title}
+              price={item.price}
+              image={item.imageUrl}
+            />
+          );
         })}
       </ul>
     </div>

@@ -29,18 +29,18 @@ import CartItems from "./CartItems";
 const Cart = (props) => {
   const cartCtx = useContext(CartContext);
   let totalAmount = 0;
-  cartCtx?.items?.forEach((item) => {
-    totalAmount = totalAmount + item.price;
+  cartCtx?.item?.forEach((items) => {
+    totalAmount = totalAmount + items.price;
   });
 
   const cartItems = (
     <ul className={classes["cart-items"]}>
-      {cartCtx.items.map((item) => (
+      {cartCtx?.item?.map((item) => (
         <li className={classes.coloumn}>
           <CartItems
             key={item.id}
             id={item.id}
-            img={item.img}
+            img={item.image}
             title={item.title}
             quantity={item.quantity}
             price={item.price}
