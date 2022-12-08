@@ -3,9 +3,10 @@ import { useContext } from "react";
 
 const CartItems = (props) => {
   const cartCntx = useContext(CartContext);
-  const onAddHandler = () => {
+
+  const onRemoveHandler = () => {
+    cartCntx.removeItem(props);
     console.log(props)
-    cartCntx.addItem(props)
   };
 
   return (
@@ -13,11 +14,11 @@ const CartItems = (props) => {
       <div>
         <h2>{props.title}</h2>
         <img src={props.img} alt='icon'></img>
-        <span>$ {props.price}</span>
+        <span> ${props.price}</span>
         <span> x {props.quantity}</span>
       </div>
       <div>
-        <button onClick={onAddHandler}>+</button>
+        <button onClick={onRemoveHandler}>-</button>
       </div>
     </li>
   );

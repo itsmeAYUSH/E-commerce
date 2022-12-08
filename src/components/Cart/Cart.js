@@ -35,7 +35,7 @@ const Cart = (props) => {
 
   const cartItems = (
     <ul className={classes["cart-items"]}>
-      {cartCtx?.item?.map((item) => (
+      {cartCtx?.items?.map((item) => (
         <li className={classes.coloumn}>
           <CartItems
             key={item.id}
@@ -63,7 +63,7 @@ const Cart = (props) => {
         <span className={classes.item}> PRICE </span>
         <span className={classes.item}> QUANTITY </span>
       </div>
-      {CartItems}
+      {cartItems}
       <h2 className={classes.h2}> Total ${totalAmount} </h2>
 
       <button className={classes.button}>PURCHASE </button>

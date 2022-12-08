@@ -8,10 +8,20 @@ const CartProvider = (props) => {
   const addItemToCartHandler = (item) => {
     setItems([...items, item]);
   };
+  const emptyCartHandler = () => {
+    setItems([]);
+  }
+  const initializeCartHandler = (items) => {
+    setItems(items)
+
+  }
   const cartContext = {
-    item: [],
+    items: items,
     totalAmount: 0,
     addItem: addItemToCartHandler,
+    // removeItem: removeItemHandler,
+    emptyCart: emptyCartHandler,
+    initilizeCart: initializeCartHandler,
   };
   return (
     <CartContext.Provider value={cartContext}>
