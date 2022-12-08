@@ -10,7 +10,7 @@ const Product = (props) => {
 
   const addItemToCart = (event) => {
     event.preventDefault();
-    cartCtx.addItem({ ...props.item });
+    cartCtx.addItem({ ...props });
     console.log(cartCtx);
   };
 

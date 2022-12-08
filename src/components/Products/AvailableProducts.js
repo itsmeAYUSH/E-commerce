@@ -35,7 +35,7 @@ const AvailableProducts = (props) => {
               price={item.price}
               image={item.imageUrl}
             />
-          );
+          )
         })}
       </ul>
     </div>
