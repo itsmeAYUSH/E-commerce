@@ -7,7 +7,6 @@ import { useEffect } from "react";
 import CartContext from "../../../store/cart-context";
 
 const Header = (props) => {
-  
   const [quantity, setQuantity] = useState(0);
 
   const authCtx = useContext(AuthContext);
@@ -16,7 +15,7 @@ const Header = (props) => {
   const history = useHistory();
 
   useEffect(() => {
-    setQuantity(cartCtx.items.length || 0);
+    setQuantity(cartCtx?.items?.length || 0);
   }, [cartCtx.items]);
 
   const logoutHandler = () => {

@@ -1,34 +1,51 @@
 // import classes from "./AvailableItems.module.css";
 import Product from "./Product";
+import CartContext from "../../store/cart-context";
+import { useContext, useEffect } from "react";
+import axios from "axios";
 
-const productsArr = [
-  {
-    id: "1",
-    title: "Colors",
-    price: 100,
-    imageUrl: "/images/ProductImage/Album-1.png",
-  },
-  {
-    id: "2",
-    title: "Black and white Colors",
-    price: 50,
-    imageUrl: "/images/ProductImage/Album-2.png",
-  },
-  {
-    id: "3",
-    title: "Yellow and Black Colors",
-    price: 70,
-    imageUrl: "/images/ProductImage/Album-3.png",
-  },
-  {
-    id: "4",
-    title: "Blue Color",
-    price: 100,
-    imageUrl: "/images/ProductImage/Album-4.png",
-  },
-];
+const AvailableProducts = () => {
+  const cartCtx = useContext(CartContext);
 
-const AvailableProducts = (props) => {
+  const productsArr = [
+    {
+      id: "1",
+      title: "Colors",
+      price: 100,
+      imageUrl: "/images/ProductImage/Album-1.png",
+    },
+    {
+      id: "2",
+      title: "Black and white Colors",
+      price: 50,
+      imageUrl: "/images/ProductImage/Album-2.png",
+    },
+    {
+      id: "3",
+      title: "Yellow and Black Colors",
+      price: 70,
+      imageUrl: "/images/ProductImage/Album-3.png",
+    },
+    {
+      id: "4",
+      title: "Blue Color",
+      price: 100,
+      imageUrl: "/images/ProductImage/Album-4.png",
+    },
+  ];
+
+  let email = localStorage.getItem("email").replace(".", "").replace("@", "");
+
+  useEffect(() => {
+    axios
+      .get(
+        `https://crudcrud.com/api/789df598ba8e4f94aa8f6e2066a94299/cart${email}`
+      )
+      .then((res) => {
+        cartCtx.initilizeCart(res.data);
+      });
+  }, []);
+
   return (
     <div>
       <ul>

@@ -5,31 +5,11 @@ import { useContext } from "react";
 import CartContext from "../../store/cart-context";
 import CartItems from "./CartItems";
 
-// const cartElements = [
-//   {
-//     title: "Colors",
-//     price: 100,
-//     imageUrl: "https://prasadyash2411.github.io/ecom-website/img/Album%201.png",
-//     quantity: 2,
-//   },
-//   {
-//     title: "Black and white Colors",
-//     price: 50,
-//     imageUrl: "https://prasadyash2411.github.io/ecom-website/img/Album%202.png",
-//     quantity: 3,
-//   },
-//   {
-//     title: "Yellow and Black Colors",
-//     price: 70,
-//     imageUrl: "https://prasadyash2411.github.io/ecom-website/img/Album%203.png",
-//     quantity: 1,
-//   },
-// ];
-
 const Cart = (props) => {
   const cartCtx = useContext(CartContext);
+
   let totalAmount = 0;
-  cartCtx?.item?.forEach((items) => {
+  cartCtx?.items?.forEach((items) => {
     totalAmount = totalAmount + items.price;
   });
 
@@ -44,6 +24,7 @@ const Cart = (props) => {
             title={item.title}
             quantity={item.quantity}
             price={item.price}
+            _id={item._id}
           />
         </li>
       ))}
