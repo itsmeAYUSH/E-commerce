@@ -9,6 +9,7 @@ const TourInfo = (props) => {
       <span className={classes.tourDes}>{props.tour.venue}</span>
       <button className={classes.buyBtn}>BUY TICKETS</button>
     </div>
+
   );
 };
 

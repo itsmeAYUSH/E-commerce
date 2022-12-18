@@ -1,4 +1,5 @@
 import { Fragment, useRef } from "react";
+import classes from "./Contact.module.css";
 
 const Contact = () => {
   const usernameRef = useRef("");
@@ -33,27 +34,36 @@ const Contact = () => {
 
   return (
     <Fragment>
-      <h1>Contact us</h1>
-      <form onSubmit={submitHandler}>
+      <h1 className={classes.title}>Contact Us</h1>
+      <form className={classes.form} onSubmit={submitHandler}>
         <label> Name</label>
         <input
           id="username"
           type="text"
           name="username"
           ref={usernameRef}
+          placeholder="your name"
           required
         />
         <label> EmailId</label>
-        <input id="email" type="email" name="emailId" ref={emailRef} required />
+        <input
+          id="email"
+          type="email"
+          name="emailId"
+          placeholder="yourEmail@gmail.com"
+          ref={emailRef}
+          required
+        />
         <label> Phone Number</label>
         <input
           id="phonenumber"
           type="number"
           name="phonenumber"
+          placeholder='xxxxxxxxxx'
           ref={phoneRef}
           required
         />
-        <button>Submit</button>
+        <button className={classes.btn}>Submit</button>
       </form>
     </Fragment>
   );

@@ -1,5 +1,6 @@
 import { useState, useContext, useEffect } from "react";
 import { Route, Switch, Redirect } from "react-router-dom";
+import axios from "axios";
 
 import Header from "./components/Layout/header/Header";
 import Cart from "../src/components/Cart/Cart";
@@ -12,18 +13,21 @@ import AuthContext from "./store/auth-context";
 import AuthForm from "./components/Authentication/AuthForm";
 // import Footer from "./components/Layout/footer/Footer";
 import ProductDetails from "./components/prodDetails/ProductDetails";
-import axios from "axios";
 import CartContext from "./store/cart-context";
+import Footer from "./components/Layout/footer/Footer";
+
 
 const App = () => {
 
-  const authCtx = useContext(AuthContext);
   const cartCtx = useContext(CartContext);
   if(!localStorage.getItem('email')) {
-    localStorage.setItem("email","")
+    localStorage.setItem("email",'')
   }
-  let email = localStorage.getItem("email").replace(".", "").replace("@", "");
+  const authCtx = useContext(AuthContext);
 
+
+  // let email = localStorage.getItem("email");
+  let emailId = localStorage.getItem("email").replace(".", "").replace("@", "");
   const [cartIsShow, setCartIsShow] = useState(false);
 
   const showCartHandler = () => {
@@ -35,10 +39,10 @@ const App = () => {
   };
 
   useEffect(() => {
-    if (!email) return;
+    if (!emailId) return;
     axios
       .get(
-        `https://crudcrud.com/api/789df598ba8e4f94aa8f6e2066a94299/cart${email}`
+        `https://crudcrud.com/api/eab7e1298555456487b04f8cd21c026b/cart${emailId}`
       )
       .then((res) => {
         const data = res.data;
@@ -51,7 +55,7 @@ const App = () => {
       .catch((err) => {
         alert(err);
       });
-  }, [email, cartCtx]);
+  }, [emailId, cartCtx]);
 
   return (
     <div>
@@ -96,6 +100,7 @@ const App = () => {
           <Redirect to="/"></Redirect>
         </Route>
       </Switch>
+      <Footer/>
     </div>
   );
 };

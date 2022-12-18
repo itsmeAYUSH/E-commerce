@@ -1,44 +1,46 @@
-*{
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 .albumButton {
-    display: block;
-    border: 1px solid #56CCF2;
-    padding: 15px 30px;
-    font-size: 23px;
-    font-weight: 200;
-    margin: 10px auto;
-    background: inherit;
-    cursor: pointer;
-    color: white;
+  display: block;
+  border: 1px solid #56ccf2;
+  padding: 15px 30px;
+  font-size: 23px;
+  font-weight: 200;
+  margin:  auto;
+  background: inherit;
+  cursor: pointer;
+  color: white;
 }
-.header{
-    background-color: blueviolet;
-    padding-bottom: 50px;
-    margin-top: 0px;
+.header {
+  background-color: blueviolet;
+  padding-bottom: 50px;
+  margin-top: 0px;
 }
-.playButton{
-    cursor: pointer;
-    display: block;
-    border: 2px solid #56CCF2;
-    border-radius: 50%;
-    padding: 20px 30px;
-    font-size: 30px;
-    font-weight: 200;
-    margin: 20px auto;
-    background: inherit;
-    color: #56CCF2;
-
+.header h1{
+    margin-bottom: 0px;
 }
-.containers{
-    max-width: 900px;
-    margin: 0 auto;
-    padding: 20px 30px;
+.playButton {
+  cursor: pointer;
+  display: block;
+  border: 2px solid #56ccf2;
+  border-radius: 50%;
+  padding: 20px 30px;
+  font-size: 30px;
+  font-weight: 200;
+  margin: 20px auto 0px;
+  background: inherit;
+  color: #56ccf2;
 }
-.tourTitle{
-    text-align: center;
-    padding: 20px;
-    font-size: 30px;
+.containers {
+  max-width: 900px;
+  margin: 0 auto;   
+  padding: 20px 30px;
+}
+.tourTitle {
+  text-align: center;
+  padding: 20px;
+  font-size: 30px;
 }

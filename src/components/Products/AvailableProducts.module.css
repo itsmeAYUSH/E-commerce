@@ -1,0 +1,14 @@
+/* *{
+    border:1px solid red;
+} */
+.title{
+    text-align: center;
+    padding: 20px;
+    font-size: 30px;
+}
+.content{
+    display: flex;
+    flex-wrap: wrap;
+    text-align: center;
+    justify-content: center;
+}

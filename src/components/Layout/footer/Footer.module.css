@@ -1,6 +1,40 @@
-.footer{
-    text-align: center;
-    padding: 3px;
-    background-color: blueviolet;
-    color: white;
+/* .footer {  
+  margin-top: 1rem;
+  padding: 1rem;
+  bottom: 0px;
+  left: 0px;
+  background-color: blueviolet;
+  width: 100%;
+  display: flex;
+} */
+.footer {
+  display: flex;
+  margin-top: 40px;
+  padding: 20px;
+  background-color: blueviolet;
+}
+.title {
+  text-align: center;
+  color: black;
+  width: 50%;
+  font-size: 40px;
+  font-weight: bold;
+  margin: 0 auto;
+}
+.icons {
+  width: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+.icons ul {
+  list-style-type: none;
+  display: flex;
+}
+.icons li {
+  padding: 10px;
+  margin: 0px 20px;
+}
+.icons img {
+  width: 35px;
 }

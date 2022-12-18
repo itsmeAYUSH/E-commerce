@@ -43,7 +43,7 @@ const Header = (props) => {
         <button className={classes.button} onClick={props.onShowCart}>
           Cart <span className={classes.cartNumber}> {quantity}</span>
         </button>
-        <button onClick={logoutHandler}>Login/Logout</button>
+        <button onClick={logoutHandler}>Logout</button>
       </header>
       <h1 className={classes.h1}> The Generics </h1>
     </Fragment>

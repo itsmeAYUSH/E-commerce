@@ -3,6 +3,7 @@ import Product from "./Product";
 import CartContext from "../../store/cart-context";
 import { useContext, useEffect } from "react";
 import axios from "axios";
+import classes from "./AvailableProducts.module.css";
 
 const AvailableProducts = () => {
   const cartCtx = useContext(CartContext);
@@ -10,36 +11,37 @@ const AvailableProducts = () => {
   const productsArr = [
     {
       id: "1",
-      title: "Colors",
-      price: 100,
+      title: "Album 1",
+      price: 500,
       imageUrl: "/images/ProductImage/Album-1.png",
     },
     {
       id: "2",
-      title: "Black and white Colors",
-      price: 50,
+      title: "Album 2",
+      price: 300,
       imageUrl: "/images/ProductImage/Album-2.png",
     },
     {
       id: "3",
-      title: "Yellow and Black Colors",
-      price: 70,
+      title: "Album 3",
+      price: 700,
       imageUrl: "/images/ProductImage/Album-3.png",
     },
     {
       id: "4",
-      title: "Blue Color",
+      title: "Album 4",
       price: 100,
       imageUrl: "/images/ProductImage/Album-4.png",
     },
   ];
 
-  let email = localStorage.getItem("email").replace(".", "").replace("@", "");
+  let emailId = localStorage.getItem("email").replace(".", "").replace("@", "");
+  // let email = localStorage.getItem("email");
 
   useEffect(() => {
     axios
       .get(
-        `https://crudcrud.com/api/789df598ba8e4f94aa8f6e2066a94299/cart${email}`
+        `https://crudcrud.com/api/eab7e1298555456487b04f8cd21c026b/cart${emailId}`
       )
       .then((res) => {
         cartCtx.initilizeCart(res.data);
@@ -47,7 +49,8 @@ const AvailableProducts = () => {
   }, []);
 
   return (
-    <div>
+    <div className={classes.content}>
+      <h2 className={classes.title}>Music Albums</h2>
       <ul>
         {productsArr.map((item) => {
           return (

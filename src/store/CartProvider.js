@@ -3,8 +3,12 @@ import CartContext from "./cart-context";
 import axios from "axios";
 
 export const CartProvider = (props) => {
-  let email = localStorage.getItem("email").replace(".", "").replace("@", "");
   // let email = localStorage.getItem('email');
+  if(!localStorage.getItem('email')) {
+    localStorage.setItem("email",'')
+  }
+  let emailId = localStorage.getItem("email").replace(".", "").replace("@", "");
+
 
   const [items, setItems] = useState([]);
 
@@ -23,7 +27,7 @@ export const CartProvider = (props) => {
         let { _id, ...updatedData } = arr[index];
         axios
           .put(
-            `https://crudcrud.com/api/789df598ba8e4f94aa8f6e2066a94299/cart${email}/${arr[index]._id}`,
+            `https://crudcrud.com/api/eab7e1298555456487b04f8cd21c026b/cart${emailId}/${arr[index]._id}`,
             updatedData
           )
           .then((res) => {
@@ -37,7 +41,7 @@ export const CartProvider = (props) => {
     if (flag === false) {
       axios
         .post(
-          `https://crudcrud.com/api/789df598ba8e4f94aa8f6e2066a94299/cart${email}`,
+          `https://crudcrud.com/api/eab7e1298555456487b04f8cd21c026b/cart${emailId}`,
           { ...item, quantity: 1 }
         )
         .then((res) => {

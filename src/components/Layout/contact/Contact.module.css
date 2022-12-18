@@ -1,0 +1,42 @@
+.title{
+    background-color:blueviolet;
+    text-align: center;
+}
+
+.form{
+    border: none;
+    border-radius: 10px;
+    box-shadow: 0 0 7px grey;
+    margin: 50px auto;
+    padding: 40px;
+    width: 600px;
+}
+.form label{
+    display: block;
+    font-size: 20px;
+    font-weight: 500;
+}
+.form input{
+    border-color: rgba(0,0,0,.2);
+    border-radius: 3px;
+    font-size: 20px;
+    margin-bottom: 1em;
+    padding: 2px;
+    width: 96%;
+}
+.form button{
+    text-align: center;
+}
+.btn{
+    background-color: #ccc;
+    border: none;
+    border-radius: 25px;
+    font-size: 20px;
+    font-weight: 700;
+    margin-top: 30px;
+    padding: 5px 40px;
+    width: 30%;
+    justify-content: center;
+    text-align: center;
+
+}

@@ -1,4 +1,4 @@
-.list {
+/* .list {
     text-align: center;
     float: left;
     zoom: 1;
@@ -7,4 +7,43 @@
     margin-left: 15rem;
     margin-bottom: 0rem;
     padding: 5px;
+} */
+/* *{
+    border: solid 1px red;
+} */
+.list {
+  text-align: center;
+  float: left;
+  zoom: 1;
+  margin: 1rem;
+  list-style: none;
+  margin-left: 15rem;
+  margin-bottom: 0rem;
+  padding: 5px;
+}
+.amount {
+  border: 2px solid blueviolet;
+  border-radius: 5px;
+  padding: 10px 20px;
+}
+.details {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+}
+.btn {
+  cursor: pointer;
+  padding: 8px;
+  color: black;
+  border: none;
+  font-size: 15px;
+  font-weight: bold;
+  border-radius: 4%;
+  background: blueviolet;
+  padding: 10px 20px;
+}
+.btn:hover {
+    border: 2px solid blueviolet;
+  color: black;
+  background-color: white;
 }

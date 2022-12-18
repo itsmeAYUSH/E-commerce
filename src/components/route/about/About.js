@@ -1,8 +1,11 @@
+import classes from './About.module.css';
 
 const About = () => {
   return (
-    <div>
-      <h2>About</h2>
+    <div className={classes.about}>
+      <h2 className={classes.title}>About</h2>
+      <div>
+        <img src='images/AboutImage/about.png'></img>
       <p>
         Lorem ipsum carrots enhanced rebates. Excellent sayings of a man of
         sorrows, hates no prosecutors will unfold in the enduring of which were
@@ -25,6 +28,8 @@ const About = () => {
         take the hardships of the life of harsh condemn, we are accusing him?
         Him whom something large cisterns.
       </p>
+      </div>
+ 
     </div>
   );
 };
