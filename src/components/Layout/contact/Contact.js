@@ -36,30 +36,30 @@ const Contact = () => {
     <Fragment>
       <h1 className={classes.title}>Contact Us</h1>
       <form className={classes.form} onSubmit={submitHandler}>
-        <label> Name</label>
+        <label> Enter your details</label>
         <input
           id="username"
           type="text"
           name="username"
           ref={usernameRef}
-          placeholder="your name"
+          placeholder="Name"
           required
         />
-        <label> EmailId</label>
+        {/* <label> EmailId</label> */}
         <input
           id="email"
           type="email"
           name="emailId"
-          placeholder="yourEmail@gmail.com"
+          placeholder="Email Address"
           ref={emailRef}
           required
         />
-        <label> Phone Number</label>
+        {/* <label> Phone Number</label> */}
         <input
           id="phonenumber"
           type="number"
           name="phonenumber"
-          placeholder='xxxxxxxxxx'
+          placeholder='Phone Number'
           ref={phoneRef}
           required
         />

@@ -9,18 +9,18 @@
   padding: 15px 30px;
   font-size: 23px;
   font-weight: 200;
-  margin:  auto;
+  margin: auto;
   background: inherit;
   cursor: pointer;
-  color: white;
+  color: #eeeeee;
 }
 .header {
-  background-color: blueviolet;
+  background-color: #00adb5;
   padding-bottom: 50px;
   margin-top: 0px;
 }
-.header h1{
-    margin-bottom: 0px;
+.header h1 {
+  margin-bottom: 0px;
 }
 .playButton {
   cursor: pointer;
@@ -36,7 +36,7 @@
 }
 .containers {
   max-width: 900px;
-  margin: 0 auto;   
+  margin: 0 auto;
   padding: 20px 30px;
 }
 .tourTitle {

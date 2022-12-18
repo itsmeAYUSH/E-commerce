@@ -11,11 +11,11 @@
   display: flex;
   margin-top: 40px;
   padding: 20px;
-  background-color: blueviolet;
+  background-color: #00ADB5;
 }
 .title {
   text-align: center;
-  color: black;
+  color: #222831;
   width: 50%;
   font-size: 40px;
   font-weight: bold;

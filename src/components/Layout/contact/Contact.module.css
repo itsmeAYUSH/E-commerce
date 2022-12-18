@@ -1,13 +1,16 @@
 .title{
-    background-color:blueviolet;
     text-align: center;
+    text-align: center;
+    padding: 20px;
+    font-size: 30px;
 }
 
 .form{
+    text-align: center;
     border: none;
     border-radius: 10px;
     box-shadow: 0 0 7px grey;
-    margin: 50px auto;
+    margin: 0px auto;
     padding: 40px;
     width: 600px;
 }
@@ -15,6 +18,8 @@
     display: block;
     font-size: 20px;
     font-weight: 500;
+    margin: 0px 10px 10px;
+    font-weight: bold;
 }
 .form input{
     border-color: rgba(0,0,0,.2);
@@ -24,19 +29,17 @@
     padding: 2px;
     width: 96%;
 }
-.form button{
-    text-align: center;
-}
 .btn{
-    background-color: #ccc;
+    background-color: #393E46;
+    color: #EEEEEE;
     border: none;
-    border-radius: 25px;
+    border-radius: 10px;
     font-size: 20px;
-    font-weight: 700;
-    margin-top: 30px;
+    font-weight: 500;
+    margin-top: 10px;
     padding: 5px 40px;
     width: 30%;
-    justify-content: center;
-    text-align: center;
-
+}
+.btn:hover{
+    background-color: #00ADB5;
 }

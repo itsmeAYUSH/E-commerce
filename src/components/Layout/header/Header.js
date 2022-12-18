@@ -26,24 +26,24 @@ const Header = (props) => {
     <Fragment>
       <header className={classes.header}>
         <NavLink to="/home">
-          <span>HOME</span>
+          <span className={classes.title}>HOME</span>
         </NavLink>
         {authCtx.isLoggedIn && (
           <NavLink to="/store">
-            <span>STORE</span>
+            <span className={classes.title}>STORE</span>
           </NavLink>
         )}
         <NavLink to="/about">
-          <span>ABOUT</span>
+          <span className={classes.title}>ABOUT</span>
         </NavLink>
         <NavLink to="/contact">
-          <span>CONTACT US</span>
+          <span className={classes.title}>CONTACT US</span>
         </NavLink>
 
         <button className={classes.button} onClick={props.onShowCart}>
           Cart <span className={classes.cartNumber}> {quantity}</span>
         </button>
-        <button onClick={logoutHandler}>Logout</button>
+        <button onClick={logoutHandler} className={classes.logout}>Logout</button>
       </header>
       <h1 className={classes.h1}> The Generics </h1>
     </Fragment>

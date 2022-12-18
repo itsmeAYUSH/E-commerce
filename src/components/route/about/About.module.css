@@ -1,22 +1,22 @@
-.about{
-    max-width: 900px;
-    margin: 0 auto;
-    font-size: 22px;
+.about {
+  max-width: 900px;
+  margin: 0 auto;
+  font-size: 22px;
 }
-.title{
-    font-family: "Metal Mania";
-    text-align: center;
-    padding: 20px;
-    font-size: 30px;
+.title {
+  /* font-family: "Metal Mania"; */
+  text-align: center;
+  padding: 20px;
+  font-size: 30px;
 }
-.about img{
-    float: left;
-    margin: 20px 50px;
-    border-radius: 50%;
-    width: 200px;
-    height: 200px;
+.about img {
+  float: left;
+  margin: 0px 50px;
+  border-radius: 50%;
+  width: 200px;
+  height: 200px;
 }
 .about p {
-    font-size: 17px;
-    margin: 20px;
+  font-size: 17px;
+  margin: 20px;
 }

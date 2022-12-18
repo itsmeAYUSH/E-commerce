@@ -1,26 +1,29 @@
-.tourItem{
-    display: flex;
-    border-bottom: 1px solid black;
-    padding: 10px;
+.tourItem {
+  display: flex;
+  border-bottom: 1px solid black;
+  padding: 10px;
 }
-.tourDate{
-    width: 12%;
+.tourDate {
+  width: 12%;
 }
-.tourPlace{
-    width: 25%;
-    color: #777;
+.tourPlace {
+  width: 25%;
+  color: #393e46;
 }
-.tourDes{
-    width: 53%;
-    color: #777;
+.tourDes {
+  width: 53%;
+  color: #393e46;
 }
-.buyBtn{
-    width: 20%;
-    background: blueviolet ;
-    color: white;
-    border: none;
-    padding: 7px;
-    border-radius: 5px;
-    font-weight: 700;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+.buyBtn {
+  width: 20%;
+  background: #00adb5;
+  color: white;
+  border: none;
+  padding: 7px;
+  border-radius: 5px;
+  font-weight: 700;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+.buyBtn:hover {
+  color: #222831;
 }
