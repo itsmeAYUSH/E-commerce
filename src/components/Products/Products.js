@@ -4,7 +4,7 @@ import { Fragment } from "react";
 const Products = (props) => {
   return (
     <Fragment>
-      <AvailableProducts />
+      <AvailableProducts/>
     </Fragment>
   );
 };

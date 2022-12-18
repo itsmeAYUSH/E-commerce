@@ -16,10 +16,10 @@ const Product = (props) => {
       <div className={classes.div}>
         <h3>{props.title}</h3>
         <Link to={`/products/${props.id}`}>
-          <img  src={props.image} alt="products"></img>
+            <img src={props.image} alt="products"></img>
         </Link>
         <span className={classes.details}>
-          <h5 className={classes.amount}>Rs.{props.price}/-</h5>
+          <h5 className={classes.amount}>${props.price}</h5>
           <button className={classes.btn} onClick={addItemToCart}>
             Add To Cart
           </button>

@@ -1,0 +1,31 @@
+.sections {
+  display: flex;
+  margin: 60px;
+}
+.details {
+  padding: 20px 90px;
+}
+.img {
+  transition: transform 0.2s;
+}
+.img:hover {
+  transform: scale(1.2);
+}
+.price {
+  color: #00adb5;
+  font-size: 20px;
+  border: 2px solid #00adb5;
+  padding: 5px 10px;
+  background-color: #eeeeee;
+  display: block;
+}
+.rating {
+  border-radius: 20px;
+  padding: 8px 16px;
+  background-color: #00adb5;
+  margin-bottom: 20px;
+  font-weight: bold;
+}
+.reviews {
+  text-align: center;
+}

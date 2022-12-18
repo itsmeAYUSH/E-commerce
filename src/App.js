@@ -16,15 +16,12 @@ import ProductDetails from "./components/prodDetails/ProductDetails";
 import CartContext from "./store/cart-context";
 import Footer from "./components/Layout/footer/Footer";
 
-
-const App = () => {
-
+const App = (props) => {
   const cartCtx = useContext(CartContext);
-  if(!localStorage.getItem('email')) {
-    localStorage.setItem("email",'')
+  if (!localStorage.getItem("email")) {
+    localStorage.setItem("email", "");
   }
   const authCtx = useContext(AuthContext);
-
 
   // let email = localStorage.getItem("email");
   let emailId = localStorage.getItem("email").replace(".", "").replace("@", "");
@@ -100,7 +97,7 @@ const App = () => {
           <Redirect to="/"></Redirect>
         </Route>
       </Switch>
-      <Footer/>
+      <Footer />
     </div>
   );
 };
