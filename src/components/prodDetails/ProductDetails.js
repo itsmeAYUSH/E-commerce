@@ -23,7 +23,7 @@ const ProductDetails = () => {
             </div>
           </div>
           <div className={classes.reviews}>
-            <h5 className={classes.reviews}> Reviews </h5>
+            <h5> Reviews </h5>
             <p> Yash </p>
             <p> Best album. Worth buying</p>
             <p>⭐⭐⭐⭐</p>
@@ -46,7 +46,7 @@ const ProductDetails = () => {
             </div>
           </div>
           <div className={classes.reviews}>
-            <h5 className={classes.reviews}> Reviews </h5>
+            <h5> Reviews </h5>
             <p> vaibhav </p>
             <p> Awesome in cheapest rate</p>
             <p>⭐⭐⭐</p>
@@ -73,7 +73,7 @@ const ProductDetails = () => {
             </div>
           </div>
           <div className={classes.reviews}>
-            <h5 className={classes.reviews}> Reviews </h5>
+            <h5> Reviews </h5>
 
             <p> rishav </p>
             <p> best album</p>
@@ -101,7 +101,7 @@ const ProductDetails = () => {
             </div>
           </div>
           <div className={classes.reviews}>
-            <h5 className={classes.reviews}> Reviews </h5>
+            <h5> Reviews </h5>
 
             <p> rishav </p>
             <p>not worth buying..</p>

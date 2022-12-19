@@ -36,12 +36,11 @@ const AvailableProducts = () => {
   ];
 
   let emailId = localStorage.getItem("email").replace(".", "").replace("@", "");
-  // let email = localStorage.getItem("email");
 
   useEffect(() => {
     axios
       .get(
-        `https://crudcrud.com/api/eab7e1298555456487b04f8cd21c026b/cart${emailId}`
+        `https://crudcrud.com/api/43ab95b0c33c43fdafa4f60084cf31c1/cart${emailId}`
       )
       .then((res) => {
         cartCtx.initilizeCart(res.data);

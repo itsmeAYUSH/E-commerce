@@ -1,5 +1,6 @@
 .sections {
   display: flex;
+  justify-content: center;
   margin: 60px;
 }
 .details {
@@ -27,5 +28,5 @@
   font-weight: bold;
 }
 .reviews {
-  text-align: center;
+  text-align: center; 
 }

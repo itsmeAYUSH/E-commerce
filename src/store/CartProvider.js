@@ -27,7 +27,7 @@ export const CartProvider = (props) => {
         let { _id, ...updatedData } = arr[index];
         axios
           .put(
-            `https://crudcrud.com/api/eab7e1298555456487b04f8cd21c026b/cart${emailId}/${arr[index]._id}`,
+            `https://crudcrud.com/api/43ab95b0c33c43fdafa4f60084cf31c1/cart${emailId}/${arr[index]._id}`,
             updatedData
           )
           .then((res) => {
@@ -41,7 +41,7 @@ export const CartProvider = (props) => {
     if (flag === false) {
       axios
         .post(
-          `https://crudcrud.com/api/eab7e1298555456487b04f8cd21c026b/cart${emailId}`,
+          `https://crudcrud.com/api/43ab95b0c33c43fdafa4f60084cf31c1/cart${emailId}`,
           { ...item, quantity: 1 }
         )
         .then((res) => {
@@ -57,6 +57,7 @@ export const CartProvider = (props) => {
 
   const removeItemHandler = (id) => {
     let itemToRemove = items.findIndex((item) => item.id === id);
+    console.log(itemToRemove)
     const i = [...items];
     const updatedItems = i.splice(itemToRemove, 1);
     console.log(itemToRemove, i, updatedItems);

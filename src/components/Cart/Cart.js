@@ -34,10 +34,7 @@ const Cart = (props) => {
   return (
     <Modal onClose={props.onClose}>
       <section className={classes.section}>
-        <span> CART </span>
-        <button onClick={props.onClose} className={classes.cancel}>
-          x
-        </button>
+        <h2 className={classes.cart}> CART </h2>
       </section>
       <div className={classes.div}>
         <span className={classes.item}> ITEM </span>

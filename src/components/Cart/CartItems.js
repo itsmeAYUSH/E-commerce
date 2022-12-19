@@ -1,6 +1,7 @@
 import CartContext from "../../store/cart-context";
 import { useContext } from "react";
 import axios from "axios";
+import classes from "./CartItems.module.css";
 
 const CartItems = (props) => {
   let emailId = localStorage.getItem("email").replace(".", "").replace("@", "");
@@ -8,26 +9,23 @@ const CartItems = (props) => {
   const cartCntx = useContext(CartContext);
 
   const onRemoveHandler = (event) => {
-    cartCntx.removeItem(props);
+    cartCntx.removeItem(props.id);
     const id = props._id;
     console.log(id);
     axios.delete(
-      `https://crudcrud.com/api/eab7e1298555456487b04f8cd21c026b/cart${emailId}/${id}`
-      // `https://crudcrud.com/api/05cae29508b64e8ba146f819aaa95639/cart/${id}`
+      `https://crudcrud.com/api/43ab95b0c33c43fdafa4f60084cf31c1/cart${emailId}/${id}`
     );
   };
 
   return (
     <li id={`cart-item-${props.id}`}>
-      <div>
-        <h2>{props.title}</h2>
-        <img src={props.img} alt="icon"></img>
-        <span> ${props.price}</span>
-        <span> x {props.quantity}</span>
-      </div>
-      <div>
-        <button onClick={onRemoveHandler}>-</button>
-      </div>
+      <h2 className={classes.title}>{props.title}</h2>
+      <img src={props.img} alt="icon" className={classes.img}></img>
+      <span className={classes.price}> ${props.price}</span>
+      <span className={classes.quantity}> x {props.quantity}</span>
+      <button className={classes.button} onClick={onRemoveHandler}>
+        -
+      </button>
     </li>
   );
 };

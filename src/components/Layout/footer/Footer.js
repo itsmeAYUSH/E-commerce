@@ -2,12 +2,6 @@ import classes from "./Footer.module.css";
 
 const Footer = () => {
   return (
-    // <div className={classes.footer}>
-    //   <h2>The Generics</h2>
-    //   <img src="/images/Icons/facebook.png" alt="icon"></img>
-    //   <img src="/images/Icons/spotify.png" alt="icon"></img>
-    //   <img src="/images/Icons/youtube.png" alt="icon"></img>
-    // </div>
     <section className={classes.footer}>
       <div className={classes.title}>The Generics</div>
       <div className={classes.icons}>
