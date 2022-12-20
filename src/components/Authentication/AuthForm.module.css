@@ -1,6 +1,3 @@
-/* *{
-    border: 1px solid red;
-} */
 .title {
   width: 100%;
   padding: 30px;
@@ -61,10 +58,7 @@
 .actions button {
   cursor: pointer;
   font: inherit;
-  /* color: white; */
   color: #222831;
-
-  /* background-color: #9f5ccc; */
   background-color: #393E46;
   border: 1px solid #393E46;
   color:#EEEEEE;

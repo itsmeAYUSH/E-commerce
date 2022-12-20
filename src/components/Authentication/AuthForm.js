@@ -72,17 +72,21 @@ const AuthForm = () => {
       <form onSubmit={SubmitHandler} className={classes.auth}>
         <h2>{isLogin ? "Login" : "Sign Up"}</h2>
         <div className={classes.control}>
-          {/* <label htmlFor="email">Your Email</label> */}
-          <input type="email" id="email" required ref={emailInputRef}  placeholder = 'Email address'/>
+          <input
+            type="email"
+            id="email"
+            required
+            ref={emailInputRef}
+            placeholder="Email address"
+          />
         </div>
         <div className={classes.control}>
-          {/* <label htmlFor="password">Your Password</label> */}
           <input
             type="password"
             id="password"
             required
             ref={passwordInputRef}
-            placeholder = 'Password'
+            placeholder="Password"
           />
         </div>
         <div className={classes.actions}>

@@ -5,7 +5,6 @@ import classes from "./CartItems.module.css";
 
 const CartItems = (props) => {
   let emailId = localStorage.getItem("email").replace(".", "").replace("@", "");
-  // let email = localStorage.getItem("email");
   const cartCntx = useContext(CartContext);
 
   const onRemoveHandler = (event) => {
@@ -13,7 +12,7 @@ const CartItems = (props) => {
     const id = props._id;
     console.log(id);
     axios.delete(
-      `https://crudcrud.com/api/43ab95b0c33c43fdafa4f60084cf31c1/cart${emailId}/${id}`
+      `https://crudcrud.com/api/4cc378de37cc403ba387f8af4bc5cf01/cart${emailId}/${id}`
     );
   };
 

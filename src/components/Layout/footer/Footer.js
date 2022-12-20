@@ -7,7 +7,7 @@ const Footer = () => {
       <div className={classes.icons}>
         <ul>
           <li>
-            <a href="https://www.facebook.com/home.php">
+            <a href="https://www.facebook.com/">
               <img src="/images/Icons/facebook.png" alt="icon"></img>
             </a>
           </li>

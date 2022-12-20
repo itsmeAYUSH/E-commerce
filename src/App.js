@@ -1,29 +1,26 @@
-import { useState, useContext, useEffect } from "react";
+import React, { useState, useContext, useEffect } from "react";
 import { Route, Switch, Redirect } from "react-router-dom";
 import axios from "axios";
 
 import Header from "./components/Layout/header/Header";
 import Cart from "../src/components/Cart/Cart";
-import Products from "./components/Products/Products";
-// import CartProvider from "./store/CartProvider";
+import AvailableProducts from "./components/Products/AvailableProducts";
 import Home from "../src/components/route/home/Home";
 import About from "../src/components/route/about/About";
 import Contact from "./components/Layout/contact/Contact";
 import AuthContext from "./store/auth-context";
 import AuthForm from "./components/Authentication/AuthForm";
-// import Footer from "./components/Layout/footer/Footer";
 import ProductDetails from "./components/prodDetails/ProductDetails";
 import CartContext from "./store/cart-context";
 import Footer from "./components/Layout/footer/Footer";
 
-const App = (props) => {
+const App = () => {
   const cartCtx = useContext(CartContext);
   if (!localStorage.getItem("email")) {
     localStorage.setItem("email", "");
   }
   const authCtx = useContext(AuthContext);
 
-  // let email = localStorage.getItem("email");
   let emailId = localStorage.getItem("email").replace(".", "").replace("@", "");
   const [cartIsShow, setCartIsShow] = useState(false);
 
@@ -39,7 +36,7 @@ const App = (props) => {
     if (!emailId) return;
     axios
       .get(
-        `https://crudcrud.com/api/43ab95b0c33c43fdafa4f60084cf31c1/cart${emailId}`
+        `https://crudcrud.com/api/4cc378de37cc403ba387f8af4bc5cf01/cart${emailId}`
       )
       .then((res) => {
         const data = res.data;
@@ -59,9 +56,16 @@ const App = (props) => {
       {cartIsShow && <Cart onClose={hideCartHandler} />}
       {authCtx.isLoggedIn && <Header onShowCart={showCartHandler} />}
       <Switch>
-        <Route path="/" exact>
-          <AuthForm />
-        </Route>
+        {!authCtx.isLoggedIn && (
+          <Route path="/" exact>
+            <AuthForm />
+          </Route>
+        )}
+        {authCtx.isLoggedIn && (
+          <Route path="/" exact>
+            <AvailableProducts />
+          </Route>
+        )}
 
         {!authCtx.isLoggedIn && (
           <Route path="/auth">
@@ -70,7 +74,7 @@ const App = (props) => {
         )}
         {authCtx.isLoggedIn && (
           <Route path="/store" exact>
-            <Products />
+            <AvailableProducts />
           </Route>
         )}
         {authCtx.isLoggedIn && (

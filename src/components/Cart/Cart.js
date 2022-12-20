@@ -31,6 +31,10 @@ const Cart = (props) => {
     </ul>
   );
 
+  const purchaseHandler = () => {
+    cartCtx.emptyCart();
+  };
+
   return (
     <Modal onClose={props.onClose}>
       <section className={classes.section}>
@@ -44,7 +48,9 @@ const Cart = (props) => {
       {cartItems}
       <h2 className={classes.h2}> Total ${totalAmount} </h2>
 
-      <button className={classes.button}>PURCHASE </button>
+      <button className={classes.button} onClick={purchaseHandler}>
+        PURCHASE{" "}
+      </button>
     </Modal>
   );
 };

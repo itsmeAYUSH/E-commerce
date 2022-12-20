@@ -1,4 +1,3 @@
-// import classes from "./AvailableItems.module.css";
 import Product from "./Product";
 import CartContext from "../../store/cart-context";
 import { useContext, useEffect } from "react";
@@ -40,7 +39,7 @@ const AvailableProducts = () => {
   useEffect(() => {
     axios
       .get(
-        `https://crudcrud.com/api/43ab95b0c33c43fdafa4f60084cf31c1/cart${emailId}`
+        `https://crudcrud.com/api/4cc378de37cc403ba387f8af4bc5cf01/cart${emailId}`
       )
       .then((res) => {
         cartCtx.initilizeCart(res.data);

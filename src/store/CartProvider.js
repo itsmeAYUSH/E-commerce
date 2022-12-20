@@ -3,18 +3,14 @@ import CartContext from "./cart-context";
 import axios from "axios";
 
 export const CartProvider = (props) => {
-  // let email = localStorage.getItem('email');
-  if(!localStorage.getItem('email')) {
-    localStorage.setItem("email",'')
+  if (!localStorage.getItem("email")) {
+    localStorage.setItem("email", "");
   }
   let emailId = localStorage.getItem("email").replace(".", "").replace("@", "");
-
 
   const [items, setItems] = useState([]);
 
   const addItemToCartHandler = (item) => {
-    //setItems([...items, item]);
-
     let arr = [...items];
     let flag = false;
     items.forEach((element, index) => {
@@ -27,7 +23,7 @@ export const CartProvider = (props) => {
         let { _id, ...updatedData } = arr[index];
         axios
           .put(
-            `https://crudcrud.com/api/43ab95b0c33c43fdafa4f60084cf31c1/cart${emailId}/${arr[index]._id}`,
+            `https://crudcrud.com/api/4cc378de37cc403ba387f8af4bc5cf01/cart${emailId}/${arr[index]._id}`,
             updatedData
           )
           .then((res) => {
@@ -41,7 +37,7 @@ export const CartProvider = (props) => {
     if (flag === false) {
       axios
         .post(
-          `https://crudcrud.com/api/43ab95b0c33c43fdafa4f60084cf31c1/cart${emailId}`,
+          `https://crudcrud.com/api/4cc378de37cc403ba387f8af4bc5cf01/cart${emailId}`,
           { ...item, quantity: 1 }
         )
         .then((res) => {
@@ -57,7 +53,7 @@ export const CartProvider = (props) => {
 
   const removeItemHandler = (id) => {
     let itemToRemove = items.findIndex((item) => item.id === id);
-    console.log(itemToRemove)
+    console.log(itemToRemove);
     const i = [...items];
     const updatedItems = i.splice(itemToRemove, 1);
     console.log(itemToRemove, i, updatedItems);
